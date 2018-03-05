@@ -8,6 +8,7 @@ import './App.css';
 import definition from './webapp.json';
 
 import General from './pages/general';
+import LSMobile from './pages/ls-mobile';
 
 class App extends Component {
     render() {
@@ -20,6 +21,7 @@ class App extends Component {
                             <Switch>
                                 <Route path="/" exact component={Index} />
                                 <Route path="/general" component={General} />
+                                <Route path="/ls-mobile" component={LSMobile} />
                             </Switch>
                         </Router>
                     </Layout.Content>
@@ -40,6 +42,9 @@ class Index extends Component {
                 <List header={<h2>Navigation</h2>}>
                     <List.Item><Link to="/navigation/pagination">Pagination</Link></List.Item>
                     <List.Item><Link to="/navigation/steps">Steps</Link></List.Item>
+                </List>
+                <List header={<h2>LS Mobile</h2>}>
+                    <List.Item><Link to="/ls-mobile/slider">Slider</Link></List.Item>
                 </List>
             </div>
         );
