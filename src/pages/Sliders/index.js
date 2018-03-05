@@ -1,7 +1,5 @@
-import React, {Component, Fragment} from "react";
-import { List, Slider as AntSlider } from 'antd';
-import { Slider } from '@liquid-state/ls-ui-kit';
-import 'antd';
+import React, { Component, Fragment } from "react";
+import { Slider } from '@liquid-state/ui-kit';
 
 export default class Sliders extends Component {
 
@@ -10,7 +8,7 @@ export default class Sliders extends Component {
     };
 
     handleSizeChange = (e) => {
-        this.setState({size: e.target.value});
+        this.setState({ size: e.target.value });
     };
 
     render() {
