@@ -19,8 +19,7 @@ if (pkg.theme && typeof (pkg.theme) === 'string') {
 
 /* config-overrides.js */
 module.exports = function override(config, env) {
-  // config = rewireLess(config, env);
-  // with loaderOptions
+  // Use the antd import plugin.
   config = injectBabelPlugin([
     "import",
     {
@@ -28,6 +27,7 @@ module.exports = function override(config, env) {
       "style": true
     }
   ], config);
+  // Support for theming antd and custom components.
   const loaderOptions = {modifyVars: theme};
   config = rewireLess.withLoaderOptions(loaderOptions)(config, env);
   return config;
